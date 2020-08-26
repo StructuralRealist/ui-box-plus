@@ -1,0 +1,61 @@
+{
+  "name": "ui-box-plus",
+  "version": "0.1.0",
+  "description": "It's ui-box with extras.",
+  "main": "lib/ui-box-plus.js",
+  "module": "ui-box-plus",
+  "types": "lib",
+  "repository": "https://github.com/lvandergrient/ui-box-plus",
+  "author": "Leon van der Grient <info@untitled.dev>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "develop": "webpack --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build": "yarn run build:types && yarn run build:js",
+    "declarations": "tsc --declaration",
+    "prepack": "rimraf ./lib && yarn build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@types/react": "^16.9.47",
+    "@types/styled-components": "^5.1.0",
+    "babel-loader": "^8.1.0",
+    "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.26.5",
+    "source-map-loader": "^1.0.2",
+    "styled-components": "^5.1.1",
+    "typescript": "^4.0.2",
+    "ui-box": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "ui-box": "^4.1.0"
+  },
+  "keywords": [
+    "react",
+    "primitives",
+    "components",
+    "ui"
+  ],
+  "directories": {
+    "lib": "lib"
+  }
+}
