@@ -2,8 +2,7 @@ import path from "path";
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-
-import pkg from "./package.json";
+import { terser } from "rollup-plugin-terser";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
@@ -35,8 +34,19 @@ export default {
 
   output: [
     {
-      file: pkg.main,
+      file: "lib/ui-box-plus.es.js",
       format: "es",
+    },
+    {
+      file: "lib/ui-box-plus.umd.js",
+      name: "Element",
+      format: "umd",
+    },
+    {
+      file: "lib/ui-box-plus.min.js",
+      name: "Element",
+      format: "umd",
+      plugins: [terser()],
     },
   ],
 };

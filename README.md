@@ -50,6 +50,6 @@ function Example() {
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
 <!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/ui-box-primitive.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/ui-box-primitive
-[npm-downloads]: https://img.shields.io/npm/dm/ui-box-primitive.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/ui-box-plus.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/ui-box-plus
+[npm-downloads]: https://img.shields.io/npm/dm/ui-box-plus.svg?style=flat-square
