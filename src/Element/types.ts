@@ -98,7 +98,6 @@ export interface ElementProps extends SafeHTMLAttributes {
   ml?: PropType;
   mr?: PropType;
   mt?: PropType;
-  onClickOutside?: (event: React.MouseEvent) => void;
   op?: PropType;
   opacity?: PropType;
   overflow?: PropType;

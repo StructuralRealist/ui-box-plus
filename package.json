@@ -1,12 +1,12 @@
 {
   "name": "ui-box-plus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "It's ui-box with extras.",
   "main": "lib/ui-box-plus.es.js",
   "module": "ui-box-plus",
   "types": "lib",
-  "repository": "https://github.com/lvandergrient/ui-box-plus",
-  "author": "Leon van der Grient <info@untitled.dev>",
+  "repository": "https://github.com/lvandergrient/ui-box-plus.git",
+  "author": "Leon van der Grient <hello.leon+git@pm.me>",
   "license": "MIT",
   "private": false,
   "scripts": {

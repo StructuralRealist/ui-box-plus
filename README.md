@@ -6,7 +6,7 @@
 
 A fast and powerful React UI primitive for building components using CSS-in-JS. 
 Extends [ui-box](https://github.com/segmentio/ui-box) with CSS shorthands, multi-type CSS props
-and integration with styled-components.
+and integrates with [styled components](https://styled-components.com).
 
 ![](https://media.giphy.com/media/iOz3p2txHIo4U/giphy.gif)
 
@@ -16,14 +16,21 @@ and integration with styled-components.
 npm install ui-box-plus ui-box styled-components
 ```
 
+## Setup
+Add the `ThemeProvider` from styled components to your app. There is only _one_ required
+theme property: `gridSize: number`. This will be the size in pixels of one grid unit.
+
+```jsx
+<ThemeProvider theme={{gridSize: 12}}>...</ThemeProvider>
+```
+
 ## Usage
 
 ```jsx
-import Element from "ui-box-plus"
+import El from "ui-box-plus";
 
-function Button(props) {
-  return (
-    <Element
+const Button = (props) => (
+    <El
       is="button" // Strings are taken 'as is'
       h="32px" // Most CSS shorthand notations are supported
       mb // Booleans are interpreted as 1 grid unit
@@ -32,12 +39,11 @@ function Button(props) {
       w={{desktop: 8, mobile: "100%"}} // Provide an object to handle different devices
       {...props}
     />
-  )
-}
+);
 
-function Example() {
-  return <Button disabled margin="10px">Hi</Button>
-}
+const Example = () => (
+  <Button disabled mt={4}>Hi</Button>
+);
 ```
 
 ## Release History
