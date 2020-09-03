@@ -2,7 +2,11 @@ import { HTML_ATTRIBUTES, CSS_PROPS, CSS_ALIAS_MAP } from "./constants";
 import { ElementProps, PropType, ThemeFn } from "./types";
 
 const pick = (wl: string[]) => (obj: Record<string, unknown> = {}) =>
-  wl.reduce((acc, key) => (obj[key] ? { ...acc, [key]: obj[key] } : acc), {});
+  wl.reduce(
+    (acc, key) =>
+      typeof obj[key] !== "undefined" ? { ...acc, [key]: obj[key] } : acc,
+    {}
+  );
 
 const pickBy = (testFn: (value: any, key: string) => boolean) => (
   obj: Record<string, any> = {}
