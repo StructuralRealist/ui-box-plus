@@ -2,7 +2,7 @@ import React from "react";
 import Box from "ui-box";
 import { useTheme } from "styled-components";
 
-import { useDeviceInfo } from "./hooks";
+import { useDeviceInfo } from "../hooks";
 
 import { ElementProps } from "./types";
 import {

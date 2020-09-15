@@ -26,7 +26,8 @@ theme property: `gridSize: number`. This will be the size in pixels of one grid 
 
 ## Usage
 
-```jsx
+### Component
+```tsx
 import El from "ui-box-plus";
 
 const Button = (props) => (
@@ -46,8 +47,25 @@ const Example = () => (
 );
 ```
 
+### Hook
+ui-box-plus exports a hook for getting information about the device. It's used by the Element component when you provide
+an object prop. You may find it useful for creating responsive designs.
+
+```tsx
+import { useDeviceInfo } from "ui-box-plus";
+
+const { width, device } = useDeviceInfo();
+
+interface DeviceInfo {
+  width: number;
+  device: "mobile" | "tablet" | "desktop" | "hd";
+}
+```
+
 ## Release History
 
+* 0.2.0
+    * Export useDeviceInfo hook.
 * 0.1.0
     * First release.
 

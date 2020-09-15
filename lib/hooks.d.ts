@@ -1,6 +1,7 @@
+declare type Device = "mobile" | "tablet" | "desktop" | "hd";
 interface DeviceInfo {
     width: number;
-    device: string;
+    device: Device;
 }
 export declare function useDeviceInfo(): DeviceInfo;
 export {};

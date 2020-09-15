@@ -1,20 +1,22 @@
 import React from "react";
 
+type Device = "mobile" | "tablet" | "desktop" | "hd";
+
 interface DeviceInfo {
   width: number;
-  device: string;
+  device: Device;
 }
 
-const findDevice = (deviceWidth: number): string =>
+const findDevice = (deviceWidth: number): Device =>
   [
     ["mobile", 768],
     ["tablet", 1024],
     ["desktop", 1440],
     ["hd", Infinity],
-  ].find(([_, width]) => deviceWidth < width)?.[0] as string;
+  ].find(([_, width]) => deviceWidth < width)?.[0] as Device;
 
 export function useDeviceInfo(): DeviceInfo {
-  const [state, setState] = React.useState({
+  const [state, setState] = React.useState<DeviceInfo>({
     width: 0,
     device: "desktop",
   });
